@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+   <head>
+      <style>
+      #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
+      
+      #customers tr:hover {background-color: #ddd;}
+      
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #436283;
+        color: white;
+      }
+			h1{text-align: center;}
+         div{text-align: center;}
+      </style>
+      </head>
+      <body style="background-color:#9eb1ff;">
+         <h1 >Rudviq Bhavsar [1002091441] </h1> 
+         <br>
+      <div>
+         <a href="/">Main Page</a>
+      </div>   
+   <br> <br>
+      <br> <br>
+      <div>
+         <table id='customers'>
+            <tr>
+               <td><b>Name</b></td>
+               <td><b>State</b></td>
+               <td><b>Salary</b></td>
+               <td><b>Grade</b></td>
+               <td><b>Room</b></td>
+               <td><b>Telephone Number</b></td>
+               <td><b>Image Name</b></td> 
+               <td><b>Image</b></td> 
+               <td><b>Keywords</b></td> 
+            </tr>
+            {% for col in rows %}
+            <tr>
+               <td>{{col[0]}}</td>
+               <td>{{col[1]}}</td>
+               <td> {{ col[2]}}</td>
+               <td>{{col[3]}}</td>
+               <td> {{col[4]}}</td>
+               <td>{{col[5]}}</td>
+               <td>{{col[6]}}</td>
+               <td><img style="height: 150px"  src="static/{{col[6]}}" alt="No Image Found"></td> 
+               <td>{{col[7]}}</td>
+            </tr>
+            {% endfor %}
+         </table>
+</div>
+      <br>
+     
+   </body>
+</html>

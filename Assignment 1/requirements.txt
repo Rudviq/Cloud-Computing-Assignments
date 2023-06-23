@@ -1,0 +1,9 @@
+beautifulsoup4
+Flask
+Jinja2
+numpy
+opencv-python
+pandas
+Pillow
+scipy
+pyodbc
