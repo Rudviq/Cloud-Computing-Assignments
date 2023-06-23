@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <head>
+      <style>
+		h1{text-align: center;}
+         div{text-align: center;}
+
+      </style>
+      </head>
+      <body style="background-color:#9eb1ff;">
+         <h1 >Rudviq Bhavsar [1002091441] </h1> 
+         <br>
+      <div>
+         <a href="/">Main Page</a>
+      </div>   
+   <br> <br>
+      <br> <br>
+      <div>
+         {% for col in rows %} 
+         <br>
+         {{col[0]}}    
+         <br>
+            <img style="height: 150px"  src="static/{{col[6]}}" alt="No Image Found">
+         <br>
+            {% endfor %}
+</div>
+      <br>
+     
+   </body>
+</html>
