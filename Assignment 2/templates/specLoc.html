@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+  <style>
+    h1{text-align: center;}
+    div,form{text-align: center;}
+    body{text-align: center;}
+    form,input[type="text"]{margin-bottom: 5px;
+				   font-size: 16px;
+					margin-top: 5px;
+					border: none;
+					height:25px;}
+		input[type="submit"]{background-color:#2e57fb;
+							border: none;
+							color: white;
+							padding: 15px 32px;
+							text-align: center;
+							text-decoration: none;
+							display: inline-block;
+							font-size: 16px;
+							margin-top: 5px;}
+    div[class="table-responsive"]{
+      margin-top: 250px;
+    }
+</style>
+l<body style="background-color:#9eb1ff;">
+  <h1> Cloud Computing and Big Data</h1> 
+  <h1>Assignment 2 </h1>
+  <h1 >Rudviq Bhavsar [1002091441] </h1> 
+   <br>
+    <a href="/">Home</a><br><br>
+    <form action="/specLoc" method="POST">
+        Latitude: <input type="text" placeholder="Latitude" name="lat1" value="{{ lat1 }}"> <br/><br/>
+        Longitude:<input type="text" placeholder="Longitude" name="lon1" value="{{ lon1 }}"><br/><br/>
+        Distance:<input type="text" placeholder="in kms" name="kms" value="{{ km }}"><br/><br/>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+    <div class="table-responsive">
+    {% if rows %}
+        <table class="table table-bordered table-hover table-fixed table-wrap">
+            <tr>
+                <td>Id</td>
+                <td>Time</td>
+                <td>Latitude</td>
+                <td>Longitude</td>
+                <td>Magnitude</td>
+                <td>Place</td>
+            </tr>
+
+            {% for row in rows %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+                
+
+        </tr>
+          {% endfor %}
+        {%endif%}
+        </table>
+    </div>
+</body>
+</html>
+
+
+
+
